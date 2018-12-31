@@ -1,0 +1,21 @@
+.footer{
+  min-height: 60px;
+  padding: 15px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: darken(white, 60px);
+  border-top: 1px solid darken(white, 40%);
+  color: $offGreen;
+  font-family: $FontRoboto;
+  font-weight: 500;
+  width: 100%;
+  text-align: center;
+
+  a {
+    margin-left: 5px;
+    color: darken($offGreen, 10%);
+    text-transform: uppercase;
+  }
+}

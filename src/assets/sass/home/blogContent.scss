@@ -1,0 +1,48 @@
+.homeBlog{
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+
+  .homeBlogTitle{
+    margin: 50px auto;
+    margin-bottom: 20px;
+    max-width: 1200px;
+    font-size: 24px;
+    font-family: $FontCuprum;
+    font-weight: bold;
+    color: $offRed;
+  }
+
+  .contentList{
+    margin: 0 auto;
+    max-width: 1200px;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+
+    .blogMain, .blogSide{
+      flex: 1;
+      overflow: hidden;
+      min-width: 300px;
+    }
+
+    .blogSide{
+      max-width: 400px;
+    }
+
+    .blogMain{
+      margin-right: 20px;
+    }
+
+    @media screen and (max-width:625px){
+      .blogSide{
+        max-width: 100%;
+      }
+
+      .blogMain{
+        margin-right: 0;
+      }
+    }
+  }
+}

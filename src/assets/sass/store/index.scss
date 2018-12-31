@@ -1,0 +1,19 @@
+.storeContainer{
+  background-color: darken(white, 80%);
+  padding: 50px 10px;
+  box-sizing: border-box;
+
+
+  .storeContentList{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+    grid-gap: 2em;
+  }
+
+  .storeContentDisplay{
+    max-width: 1200px;
+    margin: 20px auto;
+  }
+}

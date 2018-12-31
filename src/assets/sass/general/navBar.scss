@@ -1,0 +1,115 @@
+.navBrand{
+  text-transform: uppercase;
+  font-family: $FontArchivo;
+  color: $offGreen;
+  font-weight: bold;
+}
+.navRight{
+  display: flex;
+  align-items: center;
+  ul{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    li{
+      list-style: none;
+      a{
+        padding: 5px 15px;
+        margin: 0 2px;
+        text-decoration: none;
+        font-family: $FontArchivo;
+        color: $offOrange;
+        font-size: 14px;
+        font-weight: 500;
+        position: relative;
+        border-bottom: 2px solid transparent;
+        transition: .5s ease;
+
+        &:before{
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(180deg, transparent, rgba($offBlue,0.3));
+          visibility: hidden;
+          opacity: 0;
+        }
+
+        &:hover:before{
+          visibility: visible;
+          opacity: 1;
+          transform-origin: bottom center;
+          transition: .5s .2s ease;
+        }
+
+        &:hover{
+          border-bottom: 2px solid $offGreen;
+        }
+      }
+
+      a.active{
+        border-top: 2px solid $offOrange;
+      }
+    }
+  }
+  .loginButton{
+    padding: 5px 15px;
+    border: 2px solid $offGreen;
+    background-color: transparent;
+    color: $offGreen;
+    cursor: pointer;
+    font-weight: 500;
+    font-family: $FontArchivo;
+    outline: none;
+  }
+  .mobileToggler{
+    padding: 6px;
+    margin: 0 10px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid $offRed;
+    background-color: transparent;
+    color: $offRed;
+  }
+
+  @media screen and (max-width: 700px){
+    ul{
+      display: none;
+    }
+    .mobileToggler{
+      display: flex;
+    }
+  }
+}
+.headerFixed{
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background: darken(white, 90%);
+  border-bottom: 2px solid $offGreen;
+  padding: 20px 10px;
+  box-sizing: border-box;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+  transform: translateY(0);
+  transition: .5s ease;
+
+  .inner{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    min-width: 300px;
+  }
+}
+
+.headerFixed.closed{
+  transform: translateY(-100%);
+}

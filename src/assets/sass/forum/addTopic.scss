@@ -1,0 +1,51 @@
+.createTopic{
+  margin: 20px 0;
+
+  .formGroup{
+    margin: 10px 0;
+    textarea{
+      min-height: 200px;
+      padding: 10px;
+      width: 100%;
+      font-family: $FontCuprum;
+      font-size: 14px;
+      border: 2px solid darken(white, 70%);
+      outline-color: $offBlue;
+      background-color: transparent;
+      color: white;
+    }
+    label{
+      font-size: 14px;
+      font-family: $FontCuprum;
+      margin-bottom: 5px;
+      display: block;
+      color: $offOrange;
+    }
+
+    input{
+      border: 2px solid darken(white, 70%);
+      width: 100%;
+      font-family: $FontCuprum;
+      font-size: 14px;
+      height: 40px;
+      padding: 0 10px;
+      outline-color: $offBlue;
+      background-color: transparent;
+      color: white;
+    }
+
+    .createForumTopicButton{
+      height: 40px;
+      padding: 0 15px;
+      background-color: $offBlue;
+      color: darken($offBlue, 30%);
+      font-family: $FontCuprum;
+      font-size: 16px;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      outline: none;
+      margin-top: 10px;
+    }
+  }
+}

@@ -1,0 +1,254 @@
+.authContainer{
+  width: 100%;
+  min-height: 100vh;
+  background-color: $offBlue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  box-sizing: border-box;
+
+  .authContent{
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    background-color: rgba(0,0,0,0.5);
+
+    .title{
+      font-size: 25px;
+      margin: 10px 0;
+      font-family: $FontCuprum;
+      color: $offOrange;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .subTitle{
+      margin-bottom: 10px;
+      font-size: 15px;
+      font-family: $FontRoboto;
+      color: darken(white, 10%);
+      text-align: center;
+      a{
+        color: $offBlue;
+      }
+
+    }
+  }
+
+  .authForm{
+    width: 300px;
+    .formGroup{
+      width: 100%;
+      border: 2px solid rgba(darken($offBlue, 30%),0.1);
+      height: 35px;
+      margin: 10px 0;
+      background-color: darken($offBlue, 15%);
+      position: relative;
+      overflow: hidden;
+      transition: .3s ease;
+
+      label{
+        position: absolute;
+        visibility: hidden;
+        bottom: 0 ;
+        color: $offBlue;
+        left: 5px;
+        font-size: 12px;
+        opacity: 0;
+        transition: .3s ease;
+        font-family: $FontArchivo;
+        font-weight: bold;
+      }
+
+      input{
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 100%;
+        height: 35px;
+        border: none;
+        outline: none;
+        padding: 0 10px;
+        font-family: $FontArchivo;
+        background-color: darken($offBlue, 15%);
+        color: white;
+
+        &:-webkit-autofill {
+          -webkit-box-shadow: 0 0 0 30px darken($offBlue, 15%) inset;
+          -webkit-text-fill-color: white;
+        }
+      }
+
+
+    }
+
+    .formGroup:focus-within{
+      height: 50px;
+      border-color: $offBlue;
+      box-shadow: 0 0 1px 0 $offBlue;
+
+      label{
+        visibility: visible;
+        top: 0;
+        opacity: 1;
+      }
+
+      input{
+        height: 30px;
+      }
+    }
+
+    .inputGroup{
+      margin: 10px 0;
+
+      label{
+        color: $offBlue;
+        font-family: $FontArchivo;
+        font-weight: bold;
+        margin-left: 5px;
+      }
+    }
+
+    .inputGroup.inline{
+      display: flex;
+      align-items: center;
+    }
+
+    input[type='checkbox']{
+      -webkit-appearance: none;
+      border: 2px solid rgba(darken($offBlue, 30%),0.2);
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+      outline: none;
+      transition: .3s ease;
+      position: relative;
+
+      &:checked{
+        border-color: $offBlue;
+        box-shadow: 0 0 1px 0 $offBlue;
+      }
+
+      &:after{
+        content: '';
+        position: absolute;
+        width: 70%;
+        height: 40%;
+        border: 2px solid $offBlue;
+        border-top: none;
+        border-right: none;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotateZ(0);
+        visibility: hidden;
+        opacity: 0;
+        transition: .3s ease;
+      }
+
+      &:checked:after{
+        transform: translate(-50%, -80%) rotateZ(-40deg);
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+
+    .switch{
+      width: 80px;
+      height: 35px;
+      background-color: black;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+      overflow: hidden;
+
+
+      input[type='checkbox']{
+        border: none;
+        width: 20px;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-color: white;
+        z-index: 1;
+        transition: .5s ease;
+
+        &:after{
+          display: none;
+        }
+      }
+
+      input[type='checkbox']:checked{
+        left: 60px;
+      }
+
+
+      .switchStates{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: blue;
+
+        &:before{
+          content: "Coders";
+          position: absolute;
+          width: 60px;
+          height: 100%;
+          left: 20px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          top: 0;
+          background-color: $offOrange;
+          color: darken($offBlue, 30%);
+          font-family: $FontCuprum;
+          font-weight: bold;
+          transition: .5s ease;
+        }
+        &:after{
+          content: "Gamers";
+          position: absolute;
+          width: 60px;
+          height: 100%;
+          left: -60px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          top: 0;
+          background-color: $offBlue;
+          color: darken($offOrange, 60%);
+          font-family: $FontCuprum;
+          font-weight: bold;
+          transition: .5s ease;
+        }
+      }
+
+      input[type='checkbox']:checked~.switchStates:before{
+        left: 60px;
+      }
+      input[type='checkbox']:checked~.switchStates:after{
+        left: 0;
+      }
+    }
+
+    .loginButton{
+      width: 100%;
+      background-color: darken($offBlue, 25%);
+      color: $offOrange;
+      font-family: $FontCuprum;
+      font-size: 16px;
+      font-weight: bold;
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 45px;
+      box-shadow: 0 0 2px 0 rgba(0,0,0,0.2);
+      cursor: pointer;
+      outline-color: $offBlue;
+    }
+  }
+
+}

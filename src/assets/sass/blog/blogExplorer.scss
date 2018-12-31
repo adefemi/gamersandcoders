@@ -1,0 +1,109 @@
+.wrapper.blogExplorer{
+  background-color: white;
+}
+
+.blogMainProps{
+  color: white;
+  display: flex;
+  align-items: center;
+  li{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0 10px;
+    color: $offOrange;
+    font-family: $FontCuprum;
+    font-weight: bold;
+
+    span{
+      margin-left: 5px;
+      color: $offGreen;
+    }
+  }
+}
+
+.blogExplorerContent{
+  padding: 0 10px;
+  overflow: hidden;
+  max-width: 1200px;
+  min-width: 300px;
+  display: flex;
+  margin: 50px auto;
+  flex-wrap: wrap;
+
+  .contentRight, .contentLeft{
+    flex: 1;
+    min-width: 300px;
+  }
+
+  .contentRight{
+    margin-right: 20px;
+    overflow: hidden;
+    margin-top: 10px;
+
+    .imageControl{
+      position: relative;
+      width: 100%;
+      max-height: 400px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img{
+        max-width: 100%;
+        max-height: 100%;
+        display: block;
+        position: relative;
+      }
+    }
+
+    .activeBlogContext{
+      margin: 20px 0;
+      line-height: 30px;
+      font-family: $FontRoboto;
+      font-weight: 500;
+      color: darken(white, 70%);
+    }
+  }
+
+  .contentLeft{
+    max-width: 300px;
+    .contentHeading{
+      padding: 10px;
+      background-color: $offRed;
+      font-family: $FontCuprum;
+      font-size: 16px;
+      font-weight: bold;
+      color: white;
+      margin: 10px 0;
+    }
+
+    .commentTagContainer{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(80px, auto));
+      grid-gap: 10px;
+      li{
+        list-style: none;
+        border: 2px solid darken(white, 15%);
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: $FontArchivo;
+        font-size: 15px;
+        font-weight: bold;
+        color: darken(white, 15%);
+        padding: 0 10px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 620px){
+    .contentLeft{
+      max-width: 100%;
+    }
+    .contentRight{
+      margin-right: 0;
+    }
+  }
+}

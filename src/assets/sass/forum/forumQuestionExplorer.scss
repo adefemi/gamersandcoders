@@ -1,0 +1,56 @@
+.forumQuestionContent{
+  width: 100%;
+  min-height: 50vh;
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+
+  .contentLeft, .contentRight{
+    flex: 1;
+    min-width: 300px;
+    overflow: hidden;
+    padding: 50px 0;
+  }
+
+  .contentRight{
+    max-width: 500px;
+    background-color: darken(white, 80%);
+
+    .contentMain{
+      min-width: 300px;
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 0 10px;
+      box-sizing: border-box;
+
+      .contentHeading{
+        font-size: 20px;
+        font-family: $FontCuprum;
+        font-weight: 500;
+        color: $offGreen;
+        margin-bottom: 20px;
+        padding: 10px 0;
+        border-bottom: 1px solid $offGreen;
+      }
+    }
+  }
+
+  .contentLeft{
+    .contentMain{
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 10px;
+      box-sizing: border-box;
+
+      .activeForumContext{
+        p, li{
+          line-height: 30px;
+          color: darken(white, 50%);
+        }
+        h1, h2, h3, h4, h5, h6{
+          color: darken(white, 70%);
+        }
+      }
+    }
+  }
+}

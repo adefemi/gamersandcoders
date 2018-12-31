@@ -1,0 +1,119 @@
+.mobileSideBar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+  background-color: darken($white, 80%);
+  z-index: 2;
+  max-width: 800px;
+  padding:20px;
+  box-sizing: border-box;
+  visibility: visible;
+  transform: scale(1);
+  transform-origin: left center;
+  opacity: 1;
+  transition: .5s ease;
+
+  .sideBarTitle{
+    font-size: 20px;
+    font-family: $FontCuprum;
+    padding: 20px 0;
+    margin-bottom: 0;
+    color: $offGreen;
+    border-bottom: 1px solid darken($white, 70%);
+  }
+
+  ul{
+    padding: 0;
+
+    li{
+      list-style: none;
+      a{
+        position: relative;
+        padding: 20px 0;
+        margin: 5px 0;
+        display: flex;
+        font-family: $FontArchivo;
+        font-weight: 500;
+        text-decoration: none;
+        color: $offOrange;
+        font-size: 14px;
+        transition: .5s ease;
+        border-left: 2px solid transparent;
+        align-items: center;
+
+        span{
+          padding: 0 10px;
+        }
+
+        &:before{
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(-90deg, transparent, rgba(darken(white, 70%),0.4));
+          visibility: hidden;
+          opacity: 0;
+        }
+
+        &:hover:before{
+          visibility: visible;
+          opacity: 1;
+          transform-origin: left center;
+          transition: .5s .2s ease;
+        }
+
+        &:hover{
+          border-left: 2px solid $offGreen;
+        }
+      }
+      a.active{
+        border-left: 2px solid $offGreen;
+      }
+    }
+  }
+
+  .loginButton{
+    padding: 5px 15px;
+    height: 40px;
+    border: 2px solid $offGreen;
+    background-color: transparent;
+    color: $offGreen;
+    cursor: pointer;
+    font-weight: 500;
+    font-family: $FontArchivo;
+    outline: none;
+    text-align: left;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .sideBarClose{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid $offRed;
+    background-color: transparent;
+    color: $offRed;
+  }
+
+  @media screen and (min-width: 700px) {
+    display: none;
+  }
+}
+
+.mobileSideBar.closed{
+  visibility: hidden;
+  transform: scale(0);
+  opacity: 0;
+}

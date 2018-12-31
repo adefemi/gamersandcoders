@@ -1,0 +1,25 @@
+.goUp{
+  position: fixed;
+  z-index: 1;
+  bottom: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  box-shadow: 0 2px 5px rgba(0,0,0, 0.5);
+  color: $offGreen;
+  background-color: darken(white, 80%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  visibility: visible;
+  opacity: 1;
+  transform: scale(1);
+  transition: .5s ease;
+}
+
+.goUp.closed{
+  visibility: hidden;
+  opacity: 0;
+  transform: scale(0);
+}

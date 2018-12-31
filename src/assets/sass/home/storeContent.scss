@@ -1,0 +1,15 @@
+.homeStore{
+  width: 100%;
+  height: 100%;
+  background-color: darken(white, 60%);
+  padding: 50px 10px;
+  box-sizing: border-box;
+
+  .storeContent{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+    grid-gap: 1.2em;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}

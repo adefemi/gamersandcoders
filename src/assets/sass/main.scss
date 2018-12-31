@@ -1,0 +1,273 @@
+html{
+  margin: 0; padding: 0;
+}
+
+body{
+  margin: 0; padding: 0;
+}
+
+a, a:hover{
+  color: inherit;
+}
+
+.wrapper{
+  width: 100%;
+  min-height: 50vh;
+  background-color: darken($white, 5%);
+}
+
+.centerer{
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  transform: translateY(-50%);
+  text-align: center;
+}
+
+.sider{
+  position: relative;
+  margin-top: 160px;
+  padding-bottom: 20px;
+  width: 100%;
+  transform: translate(-50%, 0);
+  max-width: 1200px;
+  min-width: 300px;
+  left: 50%;
+
+  .about{
+    color: white;
+    font-family: $FontCuprum;
+    margin: 10px;
+    max-width: 1000px;
+  }
+}
+
+.blog-card{
+  margin-bottom: 20px;
+  box-shadow: 0 1px 10px rgba(0,0,0,0.2);
+  .image-con{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img{
+      display: block;
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .context{
+    padding: 20px;
+    background-color: white;
+    .details{
+      .title{
+        font-size: 18px;
+        margin-bottom: 15px;
+        color: $offBlue;
+        font-family: $FontArchivo;
+        font-weight: bold;
+      }
+
+      .content{
+        font-family: $FontRoboto;
+        font-size: 14px;
+        color: darken(white, 60%);
+        line-height: 25px;
+      }
+
+      .props{
+        margin: 10px 0;
+        display: flex;
+        align-items: center;
+        li{
+          list-style: none;
+          margin-right: 15px;
+          display: flex;
+          align-items: center;
+          font-family: $FontCuprum;
+          color: $offRed;
+          span{
+            margin-left: 5px;
+          }
+        }
+      }
+    }
+    button{
+      padding: 10px 15px;
+      border: none;
+      background-color: $offBlue;
+      color: white;
+      font-family: $FontCuprum;
+      text-transform: capitalize;
+      cursor: pointer;
+      outline: none;
+    }
+  }
+}
+
+.forumTopicCard{
+  display: flex;
+  width: 100%;
+  min-height: 60px;
+  margin: 20px 0;
+  align-items: center;
+  background: linear-gradient(140deg, $offGreen, $offBlue);
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+  padding: 10px 0;
+
+  .topicIcon{
+    width: 60px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-family: $FontCuprum;
+    font-weight: bold;
+    border-right: 1px solid darken(white, 10%);
+    padding: 0 10px;
+  }
+  .topicDetail{
+    padding: 0 10px;
+    .topicName{
+      font-family: $FontCuprum;
+      margin-bottom: 10px;
+      font-size: 18px;
+    }
+
+    .topicAbout{
+      font-family: $FontCuprum;
+      font-size: 14px;
+      line-height: 25px;
+      margin-bottom: 5px;
+    }
+    .props{
+      display: flex;
+      font-size: 12px;
+      font-family: $FontRoboto;
+      color: darken(white, 80%);
+      span{
+        display: flex;
+        align-items: center;
+        margin-left: 20px;
+
+        svg{
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+}
+
+.forumQuestionCard{
+  width: 100%;
+  min-height: 60px;
+  margin: 20px 0;
+  background: linear-gradient(140deg, $offRed, $offOrange);
+  cursor: pointer;
+  padding: 10px;
+  box-sizing: border-box;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+
+  .questionBrief{
+    font-family: $FontCuprum;
+    line-height: 25px;
+    margin-bottom: 15px;
+  }
+
+  .props{
+    display: flex;
+    font-size: 12px;
+    font-family: $FontRoboto;
+    color: darken($offRed, 40%);
+    span{
+      display: flex;
+      align-items: center;
+      margin-left: 20px;
+
+      svg{
+        margin-right: 5px;
+      }
+    }
+  }
+}
+
+.storeCard{
+  height: 400px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+  transition: .5s ease;
+  transform: scale(1);
+  max-width: 400px;
+  .imageCon{
+    width: 60%;
+    height: 120px;
+    position: relative;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+
+    @media screen and (max-width: 550px) {
+      height: 30vw;
+      width: 45vw;
+    }
+    img{
+      position: relative;
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .title{
+    font-family: $FontCuprum;
+    font-size: 18px;
+    margin: 10px 0;
+    font-weight: bold;
+  }
+
+  .props{
+    display: flex;
+    font-size: 12px;
+    font-family: $FontRoboto;
+    color: darken(white, 80%);
+
+    li{
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0 10px;
+      font-family: $FontArchivo;
+      font-weight: bold;
+    }
+
+  }
+
+  &:hover{
+    transform: scale(1.1);
+  }
+}
+
+.loadMoreButton{
+  margin: 10px 0;
+  height: 40px;
+  padding: 0 15px;
+  border: none;
+  background-color: $offOrange;
+  font-family: $FontArchivo;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.storeCard.blue{
+  background: linear-gradient(140deg, lighten($offGreen, 10%), $offGreen,  $offBlue, darken($offBlue, 10%));
+}
+.storeCard.red{
+  background: linear-gradient(140deg, lighten($offRed, 10%),$offRed, $offOrange, darken($offOrange, 10%));
+}

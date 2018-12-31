@@ -1,0 +1,41 @@
+.wrapper.forumWrapper{
+  background-color: darken(white, 80%);
+}
+
+.forumContent{
+  max-width: 1200px;
+  min-width: 300px;
+  margin: 30px auto;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  box-sizing: border-box;
+
+  .contentLeft, .contentRight{
+    flex: 1;
+    min-width: 300px;
+  }
+
+  .contentRight{
+    max-width: 400px;
+  }
+
+  .contentLeft{
+    margin-right: 20px;
+  }
+
+  @media screen and (max-width: 700px) {
+    .contentLeft{margin-right: 0}
+    .contentRight{max-width: 100%}
+  }
+
+  .contentHeading{
+    font-size: 20px;
+    font-family: $FontCuprum;
+    font-weight: 500;
+    color: $offGreen;
+    margin-bottom: 20px;
+    padding: 10px 0;
+    border-bottom: 1px solid $offGreen;
+  }
+}
